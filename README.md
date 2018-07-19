@@ -250,4 +250,10 @@ to :
 
 - update your file `config/googleCredentials.json` with the new one exported from you Google API Console
 
+#### Third Parties we yous in the project to authenticate user
+
+- Google API Console
+
+- Facebook Developer App
+
 Now Go to http://136.243.232..209 and enjoy your Web Application
