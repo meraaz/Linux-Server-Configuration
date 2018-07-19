@@ -254,6 +254,11 @@ to :
 
 - Google API Console
 
+> PS : find the credentials located undet the project root into config/googleCredentials
+
 - Facebook Developer App
+
+> PS : find the credentials located undet the project root into config/facebookCredentials
+
 
 Now Go to http://136.243.232..209 and enjoy your Web Application
