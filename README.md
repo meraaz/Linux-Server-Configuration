@@ -131,22 +131,31 @@ you will find 2 new files id_rsa ( The private key ), id_rsa.pub (The public key
 
 `sudo systemctl restart apache2`
 
+- Check the UFW app list
 
 `sudo ufw app list`
 
+- Get the ufw status of Apache app 
 
 `sudo ufw app info "Apache Full"`
 
+- Allow requests of Apache app
 
 `sudo ufw allow in "Apache Full"`
 
+- Update the packages list
+
 `sudo apt-get update`
+
+- Install postgres 
+
 `sudo apt-get install postgresql postgresql-contrib`
 
 - Do Not Allow Remote Connections to postgresql
-sudo nano /etc/postgresql/10/main/pg_hba.conf
 
-- make sure it only accept connections from local and Linux domain sockets
+  `sudo nano /etc/postgresql/10/main/pg_hba.conf`
+
+```make sure it only accept connections from local and Linux domain sockets```
 
 - connect to postgres user
 
@@ -158,7 +167,7 @@ sudo nano /etc/postgresql/10/main/pg_hba.conf
 CREATE USER grader WITH PASSWORD 'catalog_password';
 CREATE DATABASE catalog OWNER grader;
 ```
-- to get out of postgresql our
+- to get out of postgresql
 `\q`
 
 - then to get back to grader user
@@ -234,6 +243,8 @@ to :
 
 `sudo apt install python3-pip`
 
+- install the project requirements 
+
 `sudo pip3 install -r requirements.txt`
 
 - create DB
@@ -250,15 +261,15 @@ to :
 
 - update your file `config/googleCredentials.json` with the new one exported from you Google API Console
 
-#### Third Parties we yous in the project to authenticate user
+#### Third Parties we use in the project to authenticate user
 
 - Google API Console
 
-> PS : find the credentials located undet the project root into config/googleCredentials
+> PS : find the credentials located under the project root into config/googleCredentials
 
 - Facebook Developer App
 
-> PS : find the credentials located undet the project root into config/facebookCredentials
+> PS : find the credentials located under the project root into config/facebookCredentials
 
 
 Now Go to http://136.243.232..209 and enjoy your Web Application
